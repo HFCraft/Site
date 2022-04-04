@@ -1,0 +1,56 @@
+{
+  "name": "hfcraft",
+  "version": "0.1.0",
+  "description": "A simple NextJS site for HFCraft",
+  "packageManager": "pnpm@6.32.3",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && pnpm run lint",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "latest",
+    "firebase": "latest",
+    "next": "latest",
+    "next-plugin-preact": "latest",
+    "preact": "latest",
+    "preact-render-to-string": "latest",
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "core-js": "latest",
+    "cssnano": "latest",
+    "cssnano-preset-advanced": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "latest",
+    "fast-deep-equal": "latest",
+    "husky": "latest",
+    "next-i18next": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "prettier-eslint": "latest",
+    "react-twitch-embed": "latest",
+    "tailwindcss": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriewf/HFCraft.git"
+  },
+  "keywords": [
+    "Preact",
+    "NextJS",
+    "TailwindCSS"
+  ],
+  "author": "GabriewF",
+  "license": "BSL-1.0",
+  "bugs": {
+    "url": "https://github.com/gabriewf/HFCraft/issues"
+  },
+  "homepage": "https://github.com/gabriewf/HFCraft#readme"
+}

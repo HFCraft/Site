@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Minecraft Ten';
+    src: url(/fonts/Minecraft-Ten.woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Minecraft Five Bold';
+    src: url(/fonts/Minecraft-Five-Bold.woff2);
+    font-display: swap;
+  }
+}

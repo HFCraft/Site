@@ -1,0 +1,36 @@
+module.exports = {
+  plugins: {
+    autoprefixer: {},
+    tailwindcss: {},
+    cssnano: {
+      preset: [
+        'cssnano-preset-advanced',
+        {
+          discardComments: true,
+          autoprefixer: true,
+          discardEmpty: true,
+          discardOverridden: true,
+          minifyFontValues: true,
+          minifyGradients: true,
+          minifyParams: true,
+          minifySelectors: true,
+          cssDeclarationSorter: true,
+          calc: true,
+          colormin: true,
+          convertValues: true,
+          discardDuplicates: true,
+          normalizeCharset: true,
+          normalizeDisplayValues: true,
+          reduceInitial: true,
+          reduceTransforms: true,
+          orderedValues: true,
+          normalizeString: true,
+          normalizeTimingFunctions: true,
+          normalizeUnicode: true,
+          svgo: true,
+          uniqueSelectors: true,
+        },
+      ],
+    },
+  },
+}
