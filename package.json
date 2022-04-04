@@ -2,7 +2,6 @@
   "name": "hfcraft",
   "version": "0.1.0",
   "description": "A simple NextJS site for HFCraft",
-  "packageManager": "pnpm@6.32.3",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -52,5 +51,6 @@
   "bugs": {
     "url": "https://github.com/gabriewf/HFCraft/issues"
   },
-  "homepage": "https://github.com/gabriewf/HFCraft#readme"
+  "homepage": "https://github.com/gabriewf/HFCraft#readme",
+  "packageManager": "yarn@3.2.0"
 }
