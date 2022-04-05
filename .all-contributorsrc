@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "gabriewf",
+      "name": "Felipe Gabriel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85371036?v=4",
+      "profile": "https://github.com/gabriewf",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "HFCraft",
+  "projectOwner": "gabriewf",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
