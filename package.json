@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && pnpm run lint",
+    "build": "next build && yarn run lint",
     "start": "next start",
     "lint": "next lint"
   },
@@ -57,5 +57,5 @@
     "hooks": {
       "pre-commit": "prettier --write . && yarn run lint && git add -A ."
     }
-  },
+  }
 }
