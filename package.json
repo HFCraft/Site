@@ -57,5 +57,8 @@
     "hooks": {
       "pre-commit": "prettier --write . && yarn run lint && git add -A ."
     }
+  },
+  "engines": {
+    "node": ">=16.14.2"
   }
 }

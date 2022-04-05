@@ -14,13 +14,14 @@ const Handler = (req, res) => {
           await deleteDoc(doc(getFirestore(), 'streamers', id))
 
           // Response
-          return res.status(200).json({
+          res.status(200).json({
             statusCode: 200,
             statusText: 'OK',
             success: true,
             method: req.method,
             message: `Deleted document ${id} with success!`,
           })
+
           return true
         }
 
