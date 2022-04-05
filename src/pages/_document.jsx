@@ -4,8 +4,8 @@ const Document = () => {
   return (
     <Html>
       <Head>
-        <link rel="preload" crossOrigin="anonymous" type="font/woff2" href="/fonts/Minecraft-Five-Bold.woff2" as="font" />
-        <link rel="preload" crossOrigin="anonymous" type="font/woff2" href="/fonts/Minecraft-Ten.woff2" as="font" />
+        <link rel="preload preconnect dns-prefetch" crossOrigin="anonymous" type="font/woff2" href="/fonts/Minecraft-Five-Bold.woff2" as="font" />
+        <link rel="preload preconnect dns-prefetch" crossOrigin="anonymous" type="font/woff2" href="/fonts/Minecraft-Ten.woff2" as="font" />
         <link
           rel="icon preconnect dns-prefetch"
           type="image/webp"
