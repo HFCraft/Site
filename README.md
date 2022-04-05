@@ -3,12 +3,14 @@
   <h1>HFCraft 👋</h1>
   <h3>Um servidor construido pela comunidade</h3>
   <h4>
-    Sobre esse repositorio, esse é o repositorio do site do <a href="https://www.hfcraft.xyz/">HFCraft</a>
+    Sobre esse repositorio, esse é o repositorio do site do <a href="https://hf.fegasa.tk/">HFCraft</a>
   </h4>
-
-  <img alt="Discord" src="https://img.shields.io/discord/732288721948508310?color=5865F2&label=discord&style=for-the-badge"><a href="https://discord.gg/xVZNFtKgSs" /></img>
-  <img alt="Twitch" src="https://img.shields.io/twitch/status/antonyzera?color=6441a5&label=Twitch&style=for-the-badge"><a href="https://twitch.tv/antonyzera" /></img>
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/gabriewf/HFCraft?style=for-the-badge"></img>
+  <a href="https://discord.gg/xVZNFtKgSs" />
+  <img alt="Discord" src="https://img.shields.io/discord/732288721948508310?color=5865F2&label=discord&style=for-the-badge"></img>
+  <a href="https://twitch.tv/antonyzera" />
+  <img alt="Twitch" src="https://img.shields.io/twitch/status/antonyzera?color=6441a5&label=Twitch&style=for-the-badge"></img>
+  <a href="https://github.com/gabriewf/HFCraft" />
+  <img alt="Repo size" src="https://img.shields.io/github/repo-size/gabriewf/HFCraft?style=for-the-badge" />
 </div>
 
 <h2>Lista de Softwares usados!</h2>
@@ -23,7 +25,7 @@
 - <img src="https://cdn.worldvectorlogo.com/logos/preact.svg" height=14 width=14 /> <strong>Preact</strong>
 
 <h2>Observações</h2>
-<strong>Observe o Node 16</strong>
+<strong>Observe o Node 14</strong>
 <br />
 <strong>e o Yarn é necessário.</strong>
 <br />

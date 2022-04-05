@@ -12,6 +12,8 @@ const App = ({ Component, pageProps }) => {
       <Script
         src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
         crossorigin="anonymous"
+        defer
+        async
       />
       <Component {...pageProps} />
     </>
