@@ -52,5 +52,10 @@
   "bugs": {
     "url": "https://github.com/gabriewf/HFCraft/issues"
   },
-  "homepage": "https://github.com/gabriewf/HFCraft#readme"
+  "homepage": "https://github.com/gabriewf/HFCraft#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && yarn run lint && git add -A ."
+    }
+  },
 }
