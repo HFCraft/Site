@@ -32,7 +32,11 @@
 <br />
 <strong>Você também pode clonar este repositório e construí-lo você mesmo.</strong>
 
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
 <h2>Licença do Projeto</h2>
 Exceto os arquivos na pasta <strong>public</strong>
 <br />
 O resto do arquivos são licenciados com a licença <strong>Boost Software License 1.0 (BSL-1.0)</strong>.
+<br />
+<br />
