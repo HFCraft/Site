@@ -81,7 +81,7 @@ const IndexPage = () => {
                 styles={'ml-3'}
               />
               <LinkButton
-                href={'https://www.github.com/gabriewf/HFCraft-Site'}
+                href={'https://www.github.com/gabriewf/HFCraft'}
                 intr={false}
                 w={16}
                 h={16}
