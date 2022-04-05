@@ -11,7 +11,12 @@
   <img alt="Twitch" src="https://img.shields.io/twitch/status/antonyzera?color=6441a5&label=Twitch&style=for-the-badge"></img>
   <a href="https://github.com/gabriewf/HFCraft" />
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/gabriewf/HFCraft?style=for-the-badge" />
+  
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+  <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
+
 
 <h2>Lista de Softwares usados!</h2>
 
@@ -33,6 +38,16 @@
 <strong>Você também pode clonar este repositório e construí-lo você mesmo.</strong>
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 <h2>Licença do Projeto</h2>
 Exceto os arquivos na pasta <strong>public</strong>
