@@ -32,7 +32,7 @@ const Handler = async (req, res) => {
         }
 
         // Tests
-        const Response = () => {
+        const Response = async () => {
           const { username, image, key } = req.query
           // Verify the key
 
