@@ -37,8 +37,6 @@
 <br />
 <strong>Você também pode clonar este repositório e construí-lo você mesmo.</strong>
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 
 <!-- prettier-ignore-start -->
