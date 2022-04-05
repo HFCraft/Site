@@ -19,6 +19,7 @@ const Handler = (req, res) => {
               id: doc.id,
               username: doc.data().username,
               image: doc.data().image,
+              link: doc.data().link,
             })
           })
 
@@ -29,6 +30,7 @@ const Handler = (req, res) => {
             method: req.method,
             streamers: streamersArray,
           })
+          
           return true
         }
 

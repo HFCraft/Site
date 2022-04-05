@@ -8,13 +8,12 @@ const Handler = async (req, res) => {
       case 'POST':
         // Add document
         const Add = async () => {
-          const { id } = req.query
+          const { username, image } = req.query
 
           // Delete the doc, if passed the tests
           await addDoc(collection(getFirestore(), 'sponsors'), {
-            username: query.username,
-            image: query.image,
-            link: query.link,
+            username: username,
+            image: image,
           })
 
           // Response
@@ -23,22 +22,35 @@ const Handler = async (req, res) => {
             statusText: 'OK',
             success: true,
             method: req.method,
-            message: `Deleted document ${id} with success!`,
+            sponsor: {
+              username: username,
+              image: image,
+            },
           })
+
           return true
         }
 
         // Tests
         const Response = () => {
-          const { id, key } = req.query
+          const { username, image, key } = req.query
           // Verify the key
-          if (key !== process.env.ADD_SPONSORS_SECRET_KEY) {
-            res.status(401).json({
-              statusCode: 401,
-              statusText: `Unauthorized`,
+
+          if (username === undefined ||
+            username === false ||
+            image === undefined ||
+            image === false ||
+            key !== process.env.ADD_SPONSORS_SECRET_KEY
+          ) {
+            // Response
+            await res.status(400).json({
+              statusCode: 400,
+              statusText: 'Bad Request',
               success: false,
               method: req.method,
             })
+
+            // Break the Response
             return false
           }
 

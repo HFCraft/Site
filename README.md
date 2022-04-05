@@ -25,7 +25,7 @@
 <h2>Observações</h2>
 <strong>Observe o Node 16</strong>
 <br />
-<strong>e o PNPM 7 é necessário.</strong>
+<strong>e o Yarn é necessário.</strong>
 <br />
 <br />
 <strong>Você também pode clonar este repositório e construí-lo você mesmo.</strong>

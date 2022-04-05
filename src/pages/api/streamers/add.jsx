@@ -8,37 +8,53 @@ const Handler = async (req, res) => {
       case 'POST':
         // Add document
         const Add = async () => {
-          const { id } = req.query
+          const { username, image, link } = req.query
 
           // Delete the doc, if passed the tests
           await addDoc(collection(getFirestore(), 'streamers'), {
-            username: query.username,
-            image: query.image,
-            link: query.link,
+            username: username,
+            image: image,
+            link: link,
           })
 
           // Response
-          return res.status(200).json({
+          res.status(200).json({
             statusCode: 200,
             statusText: 'OK',
             success: true,
             method: req.method,
-            message: `Deleted document ${id} with success!`,
+            sponsor: {
+              username: username,
+              image: image,
+              link: link
+            },
           })
+
           return true
         }
 
         // Tests
         const Response = () => {
-          const { id, key } = req.query
+          const { username, image, link, key } = req.query
           // Verify the key
-          if (key !== process.env.ADD_STREAMERS_SECRET_KEY) {
-            res.status(401).json({
-              statusCode: 401,
-              statusText: `Unauthorized`,
+
+          if (username === undefined ||
+            username === false ||
+            image === undefined ||
+            image === false ||
+            link === undefined ||
+            link === false ||
+            key !== process.env.ADD_SPONSORS_SECRET_KEY
+          ) {
+            // Response
+            await res.status(400).json({
+              statusCode: 400,
+              statusText: 'Bad Request',
               success: false,
               method: req.method,
             })
+
+            // Break the Response
             return false
           }
 
@@ -54,6 +70,7 @@ const Handler = async (req, res) => {
           success: false,
           method: req.method,
         })
+        
         return false
     }
   } catch (err) {
