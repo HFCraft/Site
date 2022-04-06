@@ -3,8 +3,8 @@
 <div align="center">
   <!-- TITLE:START --> 
   <h1>HFCraft 👋</h1>
-  <h3>Um servidor construido pela comunidade</h4>
-  <h4>Sobre esse repositorio, esse é o repositorio do site do <a href="https://hf.fegasa.tk">HFCraft</a></h4>
+  <h3>Um servidor construído pela comunidade</h4>
+  <h4>Sobre esse repositório, esse é o repositório do site do <a href="https://hf.fegasa.tk">HFCraft</a></h4>
   <!-- TITLE:END --> 
 
   <!-- BADGES:START -->
@@ -15,10 +15,11 @@
   <img alt="Twitch" src="https://img.shields.io/twitch/status/antonyzera?color=6441a5&label=Twitch&style=for-the-badge" />
   <!-- -->
   <a href="https://github.com/gabriewf/HFCraft"/>
-  <img alt="Repo size" src="https://img.shields.io/github/repo-size/gabriewf/HFCraft?style=for-the-badge" />
+  <img alt="Tamanho do Repositório" src="https://img.shields.io/github/repo-size/gabriewf/HFCraft?style=for-the-badge" />
   <!-- -->
+  <!--
   <a href="#contribuidores"/>
-  <img alt="Todos os contribuidores" src="https://img.shields.io/github/all-contributors/gabriewf/HFCraft/main?color=ff00fff&style=for-the-badge" />
+  <img alt="Todos os contribuidores" src="https://img.shields.io/github/all-contributors/gabriewf/HFCraft/main?color=ff00fff&style=for-the-badge" /> -->
   <!-- BADGES:END --> 
 </div>  
 

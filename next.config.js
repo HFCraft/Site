@@ -1,14 +1,21 @@
 /** @type {import('next').NextConfig} */
 const withPreact = require('next-plugin-preact');
 const path = require('path')
+const nextTranslate = require('next-translate')
 
-module.exports = withPreact({
+const nextConfig = nextTranslate({
+  // Lang
+  i18n: {
+    locales: ['pt-BR'],
+    defaultLocale: 'pt-BR',
+  },
+
   // Compiler
   compilerOptions: {
     removeConsole: true,
     jsxImportSource: 'preact',
   },
-  swcMinify: true,
+  swcMinify: false,
 
   // Other's configs
   poweredByHeader: true,
@@ -73,3 +80,5 @@ module.exports = withPreact({
     return config
   },
 })
+
+module.exports = withPreact(nextConfig)

@@ -1,0 +1,21 @@
+{
+  "title": {
+    "text": "AO VIVO?!",
+    "desc": "Quer assistir a live da Zebra?"
+  },
+  "button": {
+    "back": "Voltar à página inicial",
+    "twitch": "Vamos à página da Twitch?"
+  },
+  "meta": {
+    "title": "Twitch | HFCraft",
+    "desc": "'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer Antonyzera, e hospedado pela PurpleHost",
+    "url": "https://www.hfcraft.xyz/twitch"
+  },
+  "twitter": {
+    "site": "@HFCraft"
+  },
+  "og": {
+    "site": "HFCraft"
+  }
+}

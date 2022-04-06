@@ -1,0 +1,23 @@
+{
+  "title": {
+    "text": "HFCraft",
+    "desc": "Um servidor no Minecraft!"
+  },
+  "button": {
+    "play": "Jogar",
+    "twitch": "Twitch",
+    "youTube": "YouTube",
+    "github": "Github"
+  },
+  "meta": {
+    "title": "Página Inicial | HFCraft",
+    "desc": "'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer Antonyzera, e hospedado pela PurpleHost",
+    "url": "https://www.hfcraft.xyz"
+  },
+  "twitter": {
+    "site": "@HFCraft"
+  },
+  "og": {
+    "site": "HFCraft"
+  }
+}
