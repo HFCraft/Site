@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "allowJs": false,
+    "skipLibCheck": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -26,5 +26,25 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "compileOnSave": true,
+  "ts-node": {
+    "pretty": true,
+    "swc": true,
+    "typeCheck": true,
+    "preferTsExts": true,
+    "compiler": "typescript",
+    "compilerHost": true,
+    "compilerOptions": {
+      "alwaysStrict": true,
+      "checkJs": true,
+      "allowJs": true,
+      "diagnostics": true,
+      "watch": true,
+      "watchFile": "dynamicPriorityPolling",
+      "watchDirectory": "dynamicPriorityPolling",
+      "strict": true,
+      "pretty": true
+    }
+  }
 }
