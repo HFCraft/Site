@@ -4,6 +4,11 @@ module.exports = {
   "pages": {
     "/": ["Index"],
     "/twitch": ["Twitch"],
+    "/play": ["Play/Index"],
+    "/play/java": ["Play/Java"],
+    "/play/bedrock": ["Play/Bedrock"],
+    "/400": ["BadRequest"],
+    "/404": ["NotFound"],
     "/500": ["ServerSideError"]
   },
   interpolation: {

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 import LinkButton from '../components/LinkButton'
 
-const Index = () => {
+const Index = (): JSX.Element => {
   const { t } = useTranslation('Index')
 
   return (
@@ -69,7 +69,7 @@ const Index = () => {
               />
               <LinkButton
                 href={
-                  'https://www.youtube.com/channel/UChVBw8q75tPAdRkfWWgNm0w'
+                  'https://www.youtube.com/channel/UCdJ6KjQxr7LyxHXHSm2Fxsg'
                 }
                 intr={false}
                 w={21}

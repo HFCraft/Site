@@ -1,15 +1,19 @@
 {
   "title": {
-    "text": "500",
-    "desc": "Erro interno"
+    "text": "Vamos jogar!",
+    "desc": "Aqui está o IP do servidor Java!"
+  },
+  "edition": {
+    "ip": "br-1.purplehost.com.br",
+    "port": "10013"
   },
   "button": {
     "back": "Voltar á página inicial"
   },
   "meta": {
-    "title": "Erro interno | HFCraft",
+    "title": "Bedrock | HFCraft",
     "desc": "'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer Antonyzera, e hospedado pela PurpleHost",
-    "url": "https://www.hfcraft.xyz/500"
+    "url": "https://www.hfcraft.xyz"
   },
   "twitter": {
     "site": "@HFCraft"

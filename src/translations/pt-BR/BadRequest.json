@@ -1,15 +1,15 @@
 {
   "title": {
-    "text": "500",
-    "desc": "Erro interno"
+    "text": "400",
+    "desc": "Requisição Invalida"
   },
   "button": {
     "back": "Voltar á página inicial"
   },
   "meta": {
-    "title": "Erro interno | HFCraft",
+    "title": "Requisição Invalida | HFCraft",
     "desc": "'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer Antonyzera, e hospedado pela PurpleHost",
-    "url": "https://www.hfcraft.xyz/500"
+    "url": "https://www.hfcraft.xyz/400"
   },
   "twitter": {
     "site": "@HFCraft"

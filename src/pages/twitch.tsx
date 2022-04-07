@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
 import useTranslation from 'next-translate/useTranslation'
-// import TwitchPlayer from 'react-twitch-embed-video'
+import TwitchPlayer from 'react-player/twitch'
 import LinkButton from '../components/LinkButton'
 
-const Twitch = () => {
+const Twitch = (): JSX.Element => {
   const { t } = useTranslation('Twitch')
 
   return (
@@ -50,6 +50,15 @@ const Twitch = () => {
             id="twitch"
             className="mt-4 mb-4 bg-slate-800 border-solid border-8 border-slate-800"
           >
+            <TwitchPlayer
+              url="twitch.tv/antonyzera"
+              height="95.4vh"
+              width="100%"
+              pip={true}
+              playing={true}
+              controls={false}
+
+            />
           </div>
 
           <div id="linkButtons">

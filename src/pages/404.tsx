@@ -1,40 +1,37 @@
 import Head from 'next/head'
 
+import useTranslation from 'next-translate/useTranslation'
 import LinkButton from '../components/LinkButton'
 
-const NotFound = () => {
+const NotFound = (): JSX.Element => {
+  const { t } = useTranslation()
+
   return (
     <>
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta
-          name="description"
-          content="'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer LordLIVE, e hospedado pela PurpleHost"
-        />
+        <meta name="description" content={t`NotFound:meta.desc`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:title" content="Página não encontrada" />
-        <meta
-          property="og:description"
-          content="'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer LordLIVE, e hospedado pela PurpleHost"
-        />
-        <meta property="og:site_name" content="HFCraft" />
-        <meta property="og:url" content="https://www.hfcraft.xyz/404" />
+        <meta property="og:title" content={t`NotFound:meta.title`} />
+        <meta property="og:description" content={t`NotFound:meta.desc`} />
+        <meta property="og:site_name" content={t`NotFound:og.site`} />
+        <meta property="og:url" content={t`NotFound:meta.url`} />
         <meta property="og:type" content="website" />
 
-        <meta name="twitter:title" content="Página não encontrada" />
+        <meta name="twitter:title" content={t`NotFound:meta.title`} />
         <meta
           name="twitter:description"
-          content="'HFCraft' é um servidor survival na última versão do Minecraft, do Streamer LordLIVE, e hospedado pela PurpleHost"
+          content={t`NotFound:meta.desc`}
         />
-        <meta name="twitter:site" content="@HFCraft" />
-        <meta name="twitter:url" content="https://www.hfcraft.xyz/404" />
+        <meta name="twitter:site" content={t`NotFound:twitter.site`} />
+        <meta name="twitter:url" content={t`NotFound:meta.url`} />
         <meta
           name="twitter:image"
           content="/_next/image?url=/images/CreeperFace.webp&w=16h=16&q=75"
         />
 
-        <title>Página não encontrada | HFCraft</title>
+        <title>{t`NotFound:meta.title`}</title>
       </Head>
       <div id="container">
         <div
@@ -43,22 +40,22 @@ const NotFound = () => {
         >
           <div id="title" className="text-5vw">
             <h1 className="font-MinecraftFiveBold flex justify-center items-center text-justify text-slate-200">
-              404
+              {t`NotFound:title.text`}
             </h1>
             <p className="font-MinecraftTen flex justify-center items-center text-justify text-slate-200">
-              Página não encontrada
+              {t`NotFound:title.desc`}
             </p>
 
             <div id="linkButtons">
               <p className="font-MinecraftFiveBold text-3vw flex justify-center content-center text-slate-200">
                 <LinkButton
-                  href={'/'}
+                  href="/"
                   intr={true}
                   w={16}
                   h={16}
-                  alt={'Voltar'}
+                  alt={t`NotFound:button.back`}
                   src={'/images/BackIcon.webp'}
-                  text={'Voltar à página inicial'}
+                  text={t`NotFound:button.back`}
                 />
               </p>
             </div>

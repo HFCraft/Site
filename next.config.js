@@ -4,12 +4,6 @@ const path = require('path')
 const nextTranslate = require('next-translate')
 
 const nextConfig = nextTranslate({
-  // Lang
-  i18n: {
-    locales: ['pt-BR'],
-    defaultLocale: 'pt-BR',
-  },
-
   // Compiler
   compilerOptions: {
     removeConsole: true,
