@@ -4,7 +4,7 @@ import Link from 'next/link'
 import useTranslation from 'next-translate/useTranslation'
 import LinkButton from '../../components/LinkButton'
 
-const PlayPage: any = (): JSX.Element => {
+const PlayPage: any: React.FC = (): JSX.Element => {
   const { t } = useTranslation('Play/Index')
 
   return (

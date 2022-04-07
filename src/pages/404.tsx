@@ -3,7 +3,7 @@ import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 import LinkButton from '../components/LinkButton'
 
-const NotFound = (): JSX.Element => {
+const NotFound: React.FC = (): JSX.Element => {
   const { t } = useTranslation()
 
   return (

@@ -4,7 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import TwitchPlayer from 'react-player/twitch'
 import LinkButton from '../components/LinkButton'
 
-const Twitch = (): JSX.Element => {
+const Twitch: React.FC = (): JSX.Element => {
   const { t } = useTranslation('Twitch')
 
   return (

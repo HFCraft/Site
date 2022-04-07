@@ -3,7 +3,7 @@ import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 import LinkButton from '../components/LinkButton'
 
-const Index = (): JSX.Element => {
+const Index: React.FC = (): JSX.Element => {
   const { t } = useTranslation('Index')
 
   return (
@@ -39,7 +39,7 @@ const Index = (): JSX.Element => {
           className="bg-gradient-to-r from-orange-500 to-amber-500 dark:bg-gradient-to-r dark:from-orange-600 dark:to-amber-600 p-24 m-5 rounded-lg "
         >
           <h1 className="font-MinecraftTen text-5vw flex justify-center content-center text-slate-200">
-            {t`title.text`}
+            {t`title.text`} &rarr;
           </h1>
           <p className="font-MinecraftFiveBold text-2.5vw flex justify-center content-center text-slate-200">
             {t`title.desc`}
