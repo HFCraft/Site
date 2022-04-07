@@ -23,8 +23,8 @@ specifiers:
   prettier: latest
   prettier-eslint: latest
   prop-types: latest
-  react: npm:@preact/compat@latest
-  react-dom: npm:@preact/compat@latest
+  react: npm:@preact/compat@^17.0.3
+  react-dom: npm:@preact/compat@^17.0.3
   react-github-corner: latest
   react-ssr-prepass: npm:preact-ssr-prepass@latest
   react-twitch-embed: latest
