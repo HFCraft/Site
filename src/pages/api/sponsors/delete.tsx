@@ -2,6 +2,7 @@
 import '../../../lib/firebase'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { doc, deleteDoc, getFirestore } from 'firebase/firestore'
+import { isNullOrUndefined } from 'node:util'
 
 // Api Handler
 const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -12,9 +13,6 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     switch (req.method) {
       case 'DELETE':
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['DELETE'])
-
         // Tests functions
         /// Unauthorized
         const Unauthorized: any = (): boolean => {
@@ -49,13 +47,10 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           // Request query
           const { id } = req.query
 
-          // Verify the key
+          // Test's
           if (req.headers.authorization !== `DELETE ${process.env.DEL_SPONSORS_SECRET_KEY}`) {
             Unauthorized()
-          }
-
-          // Verify the id
-          if (id === undefined) {
+          } else if (isNullOrUndefined(id)) {
             BadRequest()
           }
         }
@@ -98,9 +93,6 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       // End
       break
       default:
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['DELETE'])
-
         // Response
         res.status(405).send({
           statusCode: 405,

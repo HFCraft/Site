@@ -2,6 +2,7 @@
 import '../../../lib/firebase'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
+import { isNullOrUndefined } from 'node:util'
 
 // Api Handler
 const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,9 +10,6 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     switch (req.method) {
       case 'POST':
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['POST'])
-
         // Tests functions
         /// Unauthorized
         const Unauthorized: any = (): boolean => {
@@ -43,15 +41,16 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Verify function
         const Verify: any = (): null => {
+          
           // Request query
           const { username, image } = req.query
 
           // Test's
           if (req.headers.authorization !== `ADD ${process.env.ADD_SPONSORS_SECRET_KEY}`) {
             Unauthorized()
-          } else if (username === undefined) {
+          } else if (isNullOrUndefined(username)) {
             BadRequest()
-          } else if (image === undefined) {
+          } else if (isNullOrUndefined(image)) {
             BadRequest()
           }
 
@@ -103,9 +102,6 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       // End
       break
       default:
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['POST'])
-
         // Response
         res.status(405).send({
           statusCode: 405,

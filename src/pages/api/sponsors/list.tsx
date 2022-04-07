@@ -9,9 +9,6 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     switch (req.method) {
       case 'GET':
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['GET'])
-
         // Initialize the array
         const sponsorsArray: Array<any> = new Array()
 
@@ -55,9 +52,6 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       // Break
       break
       default:
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['GET'])
-
         // Response
         res.status(405).send({
           statusCode: 405,

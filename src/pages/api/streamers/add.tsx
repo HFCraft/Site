@@ -2,6 +2,7 @@
 import '../../../lib/firebase'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
+import { isNullOrUndefined } from 'node:util'
 
 // Api Handler
 const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,11 +10,8 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     switch (req.method) {
       case 'POST':
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['POST'])
-
         // Tests functions
-        /// Unauthorized
+        /// Unauthorized function
         const Unauthorized: any = (): boolean => {
           // Response
           res.status(401).send({
@@ -27,7 +25,7 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
           return false
         }
 
-        /// Bad Request
+        /// Bad Request function
         const BadRequest: any = (): boolean => {
           // Response
           res.status(400).send({
@@ -41,7 +39,7 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
           return false
         }
 
-        // Tests
+        // Verify function
         const Verify: any = (): null => {
           // Get the query
           const { username, image, link } = req.query
@@ -49,28 +47,38 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
           // Test's
           if (req.headers.authorization !== `ADD ${process.env.ADD_STREAMERS_SECRET_KEY}`) {
             Unauthorized()
-          } else if (username === undefined) {
+          } else if (isNullOrUndefined(username)) {
             BadRequest()
-          } else if (image === undefined) {
+          } else if (isNullOrUndefined(image)) {
             BadRequest()
-          } else if (link === undefined) {
+          } else if (isNullOrUndefined(link)) {
             BadRequest()
           }
 
+          // Break the function
           return null
         }
 
-        // Add document function
-        const Add: any = async () => {
+        // Add function
+        const Add: any = (): null => {
           // Get the query
           const { username, image, link } = req.query
 
           // Delete the doc, if passed the tests
-          await addDoc(collection(getFirestore(), 'streamers'), {
+          addDoc(collection(getFirestore(), 'streamers'), {
             username: username,
             image: image,
             link: link,
           })
+
+          // Break the function
+          return null
+        }
+        
+        // Response function
+        const Response: any = (): boolean => {
+          // Get the query
+          const { username, image, link } = req.query
 
           // Response
           res.status(200).send({
@@ -85,19 +93,18 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
             },
           })
 
+          // Break the request
           return true
         }
 
         // Calling functions  
         await Verify()
         await Add()
+        await Response()
 
       // End
       break
       default:
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['POST'])
-
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -110,9 +117,6 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
         return false
     }
   } /* Catch error */ catch (err: any) {
-    // Set the 'Allow' header
-    res.setHeader('Allow', ['POST'])
-    
     // Response
     res.status(500).send({
       statusCode: 500,

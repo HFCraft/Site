@@ -2,6 +2,7 @@
 import '../../../lib/firebase'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { doc, deleteDoc, getFirestore } from 'firebase/firestore'
+import { isNullOrUndefined } from 'node:util'
 
 // Api Handler
 const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,11 +10,8 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     switch (req.method) {
       case 'DELETE':
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['DELETE'])
-
         // Tests functions
-        /// Unauthorized
+        /// Unauthorized function
         const Unauthorized: any = (): boolean => {
           // Response
           res.status(401).send({
@@ -27,7 +25,7 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           return false
         }
 
-        /// Bad Request
+        /// Bad Request function
         const BadRequest: any = (): boolean => {
           // Response
           res.status(400).send({
@@ -41,31 +39,37 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
           return false
         }
 
-        // Tests
+        // Verify function
         const Verify: any = (): null => {
-          const { id, key } = req.query
+          const { id } = req.query
           // Verify the key
           if (req.headers.authorization !== `DELETE ${process.env.DEL_STREAMERS_SECRET_KEY}`) {
             Unauthorized()
-          }
-
-          // Verify the id
-          if (id === undefined) {
+          } else if (isNullOrUndefined(id)) {
             BadRequest()
           }
 
-          // Break the request
+          // Break the function
           return null
         }
 
-        // Delete the document
-        const Delete: any = async () => {
+        // Delete function
+        const Delete: any = (): null => {
           // Get the query
           const { id } = req.query
 
           // Delete the doc, if passed the tests
-          await deleteDoc(doc(getFirestore(), 'streamers', `${id}`))
+          deleteDoc(doc(getFirestore(), 'streamers', `${id}`))
 
+          // Break the function
+          return null
+        }
+
+        // Response function
+        const Response: any = (): boolean => {
+          // Get the query
+          const { id } = req.query
+          
           // Response
           res.status(200).json({
             statusCode: 200,
@@ -82,13 +86,11 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         // Calling functions
         await Verify()
         await Delete()
+        await Response()
 
       // End
       break
       default:
-        // Set the 'Allow' header
-        res.setHeader('Allow', ['DELETE'])
-
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -101,9 +103,6 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         return false
     }
   } /* Catch error */ catch (err: any) {
-    // Set the 'Allow' header
-    res.setHeader('Allow', ['DELETE'])
-    
     // Response
     res.status(500).send({
       statusCode: 500,

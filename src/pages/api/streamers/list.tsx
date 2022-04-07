@@ -18,9 +18,7 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         // Query function
         const Query: any = async () => {
           // Get on Database
-          const querySnapshot = await getDocs(
-            collection(getFirestore(), 'streamers'),
-          )
+          const querySnapshot = await getDocs(collection(getFirestore(), 'streamers'))
 
           // Query the Database
           querySnapshot.forEach((doc) => {
