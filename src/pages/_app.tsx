@@ -3,10 +3,7 @@ import '../styles/tailwind.css'
 import Script from 'next/script'
 import type { AppProps } from 'next/app'
 
-// eslint-disable-next-line no-unused-vars
-const test = true
-
-const App = ({ Component, pageProps }: AppProps) => {
+const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Script
