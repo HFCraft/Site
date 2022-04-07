@@ -39,7 +39,7 @@ const Index: React.FC = (): JSX.Element => {
           className="bg-gradient-to-r from-orange-500 to-amber-500 dark:bg-gradient-to-r dark:from-orange-600 dark:to-amber-600 p-24 m-5 rounded-lg "
         >
           <h1 className="font-MinecraftTen text-5vw flex justify-center content-center text-slate-200">
-            {t`title.text`} &rarr;
+            {t`title.text`}
           </h1>
           <p className="font-MinecraftFiveBold text-2.5vw flex justify-center content-center text-slate-200">
             {t`title.desc`}
