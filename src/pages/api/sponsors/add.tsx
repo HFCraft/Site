@@ -9,7 +9,7 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   ///
   try {
     switch (req.method) {
-      case 'POST':
+      case 'POST': {
         // Tests functions
         /// Unauthorized
         const Unauthorized: any = (): boolean => {
@@ -99,9 +99,10 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         await Add()
         await Response()
 
-      // End
-      break
-      default:
+        // End
+        break
+      }
+      default: {
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -112,8 +113,9 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Break the request
         return false
+      }
     }
-  } /* Catch error */ catch (err: any) {
+  } /* Catch error */ catch (err: unknown) {
     // Set the 'Allow' header
     res.setHeader('Allow', ['POST'])
     
@@ -123,7 +125,7 @@ const AddHandler = async (req: NextApiRequest, res: NextApiResponse) => {
       statusText: 'Internal Server Error',
       success: false,
       method: req.method,
-      error: err.message,
+      error: err,
     })
 
     // Break the request

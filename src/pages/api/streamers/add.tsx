@@ -9,7 +9,7 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
   ///
   try {
     switch (req.method) {
-      case 'POST':
+      case 'POST': {
         // Tests functions
         /// Unauthorized function
         const Unauthorized: any = (): boolean => {
@@ -102,9 +102,10 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
         await Add()
         await Response()
 
-      // End
-      break
-      default:
+        // End
+        break
+      }
+      default: {
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -115,6 +116,7 @@ const AddHandler: any = async (req: NextApiRequest, res: NextApiResponse) => {
         
         // Break the request
         return false
+      }
     }
   } /* Catch error */ catch (err: any) {
     // Response

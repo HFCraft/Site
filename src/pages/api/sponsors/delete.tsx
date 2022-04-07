@@ -12,7 +12,7 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   ///
   try {
     switch (req.method) {
-      case 'DELETE':
+      case 'DELETE': {
         // Tests functions
         /// Unauthorized
         const Unauthorized: any = (): boolean => {
@@ -90,9 +90,10 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         await Delete()
         await Response()
 
-      // End
-      break
-      default:
+        // End
+        break
+      }
+      default: {
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -103,6 +104,7 @@ const DeleteHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Break the request
         return false
+      }
     }
   } /* Catch error */ catch (err: any) {
     // Set the 'Allow' header

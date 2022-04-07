@@ -8,12 +8,12 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   ///
   try {
     switch (req.method) {
-      case 'GET':
+      case 'GET': {
         // Set 'Allow' header
         res.setHeader('Allow', ['GET'])
 
         // Initialize the array
-        const streamersArray: Array<any> = new Array()
+        const streamersArray: Array<any> = []
 
         // Query function
         const Query: any = async () => {
@@ -53,9 +53,10 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         await Query()
         await Response()
 
-      // Break
-      break
-      default:
+        // Break
+        break
+      }
+      default: {
         // Set 'Allow' header
         res.setHeader('Allow', ['GET'])
 
@@ -69,6 +70,7 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Break the request
         return false
+      }
     }
   } /* Catch error */ catch (err: any) {
     // Set 'Allow' header

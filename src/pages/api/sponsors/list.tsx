@@ -8,9 +8,9 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
   ///
   try {
     switch (req.method) {
-      case 'GET':
+      case 'GET': {
         // Initialize the array
-        const sponsorsArray: Array<any> = new Array()
+        const sponsorsArray: Array<any> = []
 
         // Query function
         const Query: any = async () => {
@@ -49,9 +49,10 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
         await Query()
         await Response()
 
-      // Break
-      break
-      default:
+        // Break
+        break
+      }
+      default: {
         // Response
         res.status(405).send({
           statusCode: 405,
@@ -62,6 +63,7 @@ const ListHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Break the request
         return false
+      }
     }
   } /* Catch error */ catch (err: any) {
     // Set the 'Allow' header
