@@ -2610,10 +2610,10 @@ next-plugin-preact@^3.0.6:
     "@prefresh/webpack" "^3.3.0"
     module-alias "^2.0.0"
 
-next-translate@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.3.5.tgz#06541951737028f1e78addce5ebec3b51a1460ba"
-  integrity sha512-JXNAuHsEjV/lGSghAQaYbKyxDr3ZQk1BiIKlGTKZg1qrxWjgxrj0sfmraQ6kRQORh7qC+OBQCVeiIkCCJfirxA==
+next-translate@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/next-translate/-/next-translate-1.5.0.tgz#b1e5c4a8e55e31b3ed1b9428529f27c289c6b7bc"
+  integrity sha512-6amnuJWw22XbaM2DVhsYaOXelFLjTbMqTgqvB+h9VfE/H2aQ/edfT06ONQLQbsVV/I7Hn+93LTaV1/qOo6Kf9A==
 
 next@^12.1.4:
   version "12.1.4"
